@@ -169,7 +169,29 @@ class TicTacToe: #tic tac toe close. Make an instance of this class to start and
                     tempList.append(each)
                 return tempList
 
-        return tempList
+        #take a corner
+        if (self.board[2][2] == '-'):
+            for each in [2, 2]:
+                tempList.append(each)
+            return tempList
+
+        elif (self.board[2][0] == '-'):
+            for each in [2, 0]:
+                tempList.append(each)
+            return tempList
+        
+        elif (self.board[0][0] == '-'):
+            for each in [0, 0]:
+                tempList.append(each)
+            return tempList
+
+        elif (self.board[0][2] == '-'):
+            for each in [0, 2]:
+                tempList.append(each)
+            return tempList
+
+        else:
+            return tempList
 
     def CheckForTie(self): #checks the self.board for a tie game
         for i in self.board:
